@@ -10,7 +10,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 // Annotates class to be a Room Database with a table (entity) of the Pet class
-@Database(entities = [Pet::class], version = 5)
+@Database(entities = [Pet::class], version = 14)
 abstract class PetRoomDatabase : RoomDatabase() {
 
     abstract fun petDao(): PetDao
@@ -30,15 +30,15 @@ abstract class PetRoomDatabase : RoomDatabase() {
             INSTANCE?.let { database ->
                 scope.launch(Dispatchers.IO) {
                     //populateDatabase(database.petDao())
-                    var petDao = database.petDao()
+                    val petDao = database.petDao()
 
                     // Delete all pets.
                     petDao.deleteAll()
 
                     //Insert pet
-                    var pet1 = Pet(name = "Berry", breed = "Chihuahua")
+                    val pet1 = Pet(name = "Berry", breed = "Chihuahua", weight = 25, gender = 1)
                     petDao.insert(pet1)
-                    var pet2 = Pet(name = "Cockie", breed = "German Shepherd")
+                    val pet2 = Pet(name = "Cockie", breed = "German Shepherd", weight = 10, gender = 2)
                     petDao.insert(pet2)
 
                 }
@@ -65,7 +65,6 @@ abstract class PetRoomDatabase : RoomDatabase() {
                         "pet_database"
                     )
                     // Wipes and rebuilds instead of migrating if no Migration object.
-                    // Migration is not part of this codelab.
                     .fallbackToDestructiveMigration()
                     .addCallback(PetDatabaseCallback(scope))
                     .build()

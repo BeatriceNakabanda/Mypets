@@ -12,13 +12,14 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mypets.NewPetActivity.Companion.EXTRA_BREED
+import com.example.mypets.NewPetActivity.Companion.EXTRA_GENDER
+import com.example.mypets.NewPetActivity.Companion.EXTRA_ID
 import com.example.mypets.NewPetActivity.Companion.EXTRA_NAME
+import com.example.mypets.NewPetActivity.Companion.EXTRA_WEIGHT
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
-
-
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()  {
 
     private val newPetActivityRequestCode = 1
     private lateinit var petViewModel: PetViewModel
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         //Add recycler view
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
-        val adapter = PetListAdapter(this)
+        val adapter = PetListAdapter(this )
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         //Set up live data observer
         petViewModel = ViewModelProvider(this).get(PetViewModel::class.java)
         petViewModel.allPets.observe(this, Observer { pets ->
-            // Update the cached copy of the words in the adapter.
+            // Update the pets in the adapter.
             pets?.let { adapter.setPets(it) }
         })
 
@@ -55,16 +56,40 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == newPetActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
-//                val word = Word(data.getStringExtra(NewWordActivity.EXTRA_REPLY))
-
-//                val newPet1 = Pet(data.getStringExtra(NewPetActivity.EXTRA_NAME), data.getStringExtra(NewPetActivity.EXTRA_BREED))
-
 
                 val petName = data.getStringExtra(EXTRA_NAME)
                 val petBreed = data.getStringExtra(EXTRA_BREED)
-                val newPet = Pet(name = petName, breed = petBreed)
+                val petWeightString = data.getStringExtra(EXTRA_WEIGHT)
+                val petGender = data.getIntExtra(EXTRA_GENDER, 0)
+                val petId = data.getIntExtra(EXTRA_ID, 0)
+//                val petGenderString = data.getStringExtra(EXTRA_GENDER)
+//                var petWeight = 0
+                val petWeight = Integer.parseInt(petWeightString)
 
+                val newPet = Pet(
+                    name = petName,
+                    breed = petBreed,
+                    weight = petWeight,
+                    gender = petGender
+                )
                 petViewModel.insert(newPet)
+                Unit
+//
+//                val updatedPet = Pet(
+//                    name = petName,
+//                    breed = petBreed,
+//                    weight = petWeight,
+//                    gender = petGender
+//                )
+//                petViewModel.update(petId, updatedPet)
+                petViewModel.update(newPet)
+                Unit
+
+
+                Toast.makeText(
+                    applicationContext,
+                    "updated name ${newPet.name}",
+                    Toast.LENGTH_LONG).show()
 
             }
         }else {
@@ -74,4 +99,11 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG).show()
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+//        recyclerView.adapter.notifyDataSetChanged()
+    }
+
 }
+

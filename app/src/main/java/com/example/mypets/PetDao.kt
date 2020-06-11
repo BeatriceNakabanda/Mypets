@@ -8,8 +8,11 @@ interface PetDao{
     @Query("SELECT * FROM pets_table")
     fun getAll(): LiveData<List<Pet>>
 
-//    @Query("SELECT * FROM pets_table WHERE uid IN (:petIds)")
-//    fun loadAllByIds(petIds: IntArray): LiveData<List<Pet>>
+    @Query("SELECT * FROM pets_table WHERE id = :petId")
+    fun getPet(petId: Int): LiveData<Pet>
+
+//    @Query("SELECT * FROM pets_table WHERE id = :petId")
+//    fun updatePet(petId: Int): LiveData<Pet>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(vararg pets: Pet)

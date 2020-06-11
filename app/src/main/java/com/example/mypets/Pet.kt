@@ -3,6 +3,7 @@ package com.example.mypets
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.io.Serializable
 
 /**
  * A basic class representing an entity that is a row in a one-column database table.
@@ -16,7 +17,11 @@ data class Pet(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id") var pid: Int = 0,
     @ColumnInfo(name = "name") var name: String,
-    @ColumnInfo(name = "breed") var breed: String
-//    @ColumnInfo(name = "gender") val gender: String?,
-//    @ColumnInfo(name = "weight") val weight: Int?
-)
+    @ColumnInfo(name = "breed") var breed: String,
+    @ColumnInfo(name = "gender") val gender: Int,
+    @ColumnInfo(name = "weight") val weight: Int?
+): Serializable {
+    fun getId(): Any {
+            return pid
+    }
+}

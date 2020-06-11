@@ -3,10 +3,10 @@ package com.example.mypets
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class PetViewModel (application: Application) : AndroidViewModel(application) {
     private val repository: PetRepository
@@ -28,6 +28,14 @@ class PetViewModel (application: Application) : AndroidViewModel(application) {
     fun insert(pet: Pet) = viewModelScope.launch(Dispatchers.IO) {
         repository.insert(pet)
     }
-
+//    fun update(id: Int, updatedPet: Pet) = viewModelScope.launch(Dispatchers.IO) {
+//        repository.update(id)
+//    }
+    fun update(pet: Pet) = viewModelScope.launch(Dispatchers.IO) {
+        repository.update(pet)
+    }
+    fun deletePet(pet: Pet) = viewModelScope.launch(Dispatchers.IO) {
+        repository.deletePet(pet)
+    }
 
 }

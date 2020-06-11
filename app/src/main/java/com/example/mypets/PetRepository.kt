@@ -10,6 +10,7 @@ class PetRepository(private val petDao: PetDao){
     // Observed LiveData will notify the observer when the data has changed.
     //list of pets is initialized by getting live data from room
     val allPets: LiveData<List<Pet>> = petDao.getAll()
+//    val onePet: LiveData<Pet> = petDao.getPet(petId)
 
     //Suspend modifier tell the compiler insert() needs to be called
     // from another suspending function
@@ -18,4 +19,21 @@ class PetRepository(private val petDao: PetDao){
     suspend fun insert(pet: Pet) {
         petDao.insert(pet)
     }
+//    fun update(id: Int){
+////        petDao.updatePet(id)
+////    }
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun update(pet: Pet){
+        petDao.updatePet(pet)
+    }
+    fun getPet(id: Int): LiveData<Pet>{
+        return petDao.getPet(id)
+    }
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun deletePet(pet: Pet){
+        petDao.deletePet(pet)
+    }
+
 }

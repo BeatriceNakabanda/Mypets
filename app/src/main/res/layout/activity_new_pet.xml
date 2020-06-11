@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/activity_margin"
-    tools:context=".EditorActivity">
+    tools:context=".NewPetActivity">
 
     <!-- Overview category -->
     <LinearLayout
@@ -46,9 +46,17 @@
             <!-- Breed field -->
             <EditText
                 android:id="@+id/edit_pet_breed"
+                style="@style/EditorFieldStyle"
                 android:hint="@string/hint_pet_breed"
-                android:inputType="textCapWords"
-                style="@style/EditorFieldStyle" />
+                android:inputType="textCapWords" />
+            <!--invalid Name field -->
+            <TextView
+                android:id="@+id/invalid_pet_breed"
+                android:visibility="gone"
+                android:text="@string/invalid_breed"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:layout_marginLeft="4dp"
+                style="@style/InvalidEditorFieldStyle" />
         </LinearLayout>
     </LinearLayout>
 
@@ -157,11 +165,12 @@
 
     <Button
         android:id="@+id/button_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/big_padding"
+        android:layout_width="72dp"
+        android:layout_height="32dp"
         android:background="@color/colorPrimary"
-        android:text="Add"
-        android:textColor="@color/editorColorPrimaryDark" />
+        android:text="Save"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="right"
+        android:textColor="@color/cardview_light_background" />
 
 </LinearLayout>
