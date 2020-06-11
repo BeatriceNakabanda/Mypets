@@ -16,7 +16,7 @@ data class Pet(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id") var pid: Int = 0,
     @ColumnInfo(name = "name") var name: String,
-    @ColumnInfo(name = "breed") var breed: String
-//    @ColumnInfo(name = "gender") val gender: String?,
-//    @ColumnInfo(name = "weight") val weight: Int?
+    @ColumnInfo(name = "breed") var breed: String,
+    @ColumnInfo(name = "gender") val gender: String,
+    @ColumnInfo(name = "weight") val weight: Int?
 )

@@ -5,6 +5,7 @@ import android.app.Activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -12,7 +13,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mypets.NewPetActivity.Companion.EXTRA_BREED
+import com.example.mypets.NewPetActivity.Companion.EXTRA_GENDER
 import com.example.mypets.NewPetActivity.Companion.EXTRA_NAME
+import com.example.mypets.NewPetActivity.Companion.EXTRA_WEIGHT
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
@@ -55,16 +58,26 @@ class MainActivity : AppCompatActivity() {
 
         if (requestCode == newPetActivityRequestCode && resultCode == Activity.RESULT_OK) {
             intentData?.let { data ->
-//                val word = Word(data.getStringExtra(NewWordActivity.EXTRA_REPLY))
-
-//                val newPet1 = Pet(data.getStringExtra(NewPetActivity.EXTRA_NAME), data.getStringExtra(NewPetActivity.EXTRA_BREED))
-
 
                 val petName = data.getStringExtra(EXTRA_NAME)
                 val petBreed = data.getStringExtra(EXTRA_BREED)
-                val newPet = Pet(name = petName, breed = petBreed)
+                val petWeightString = data.getStringExtra(EXTRA_WEIGHT)
+                val petGenderString = data.getStringExtra(EXTRA_GENDER)
+
+//                var petWeight = 0
+                val petWeight = Integer.parseInt(petWeightString)
+//                var petGender = 0
+//                val petGender = Integer.parseInt(petGenderString)
+
+                val newPet = Pet(
+                    name = petName,
+                    breed = petBreed,
+                    weight = petWeight,
+                    gender = petGenderString
+                )
 
                 petViewModel.insert(newPet)
+                Unit
 
             }
         }else {
@@ -75,3 +88,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+

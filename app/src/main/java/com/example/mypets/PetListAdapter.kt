@@ -16,6 +16,7 @@ class PetListAdapter internal constructor( context: Context)
     inner class PetViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val petItemView: TextView = itemView.findViewById(R.id.textView)
         val petBreedView: TextView = itemView.findViewById(R.id.breedtextView)
+//        val petWeightView: TextView = itemView.findViewById(R.id.edit_pet_weight)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetViewHolder {
@@ -27,8 +28,8 @@ class PetListAdapter internal constructor( context: Context)
         val current = pets[position]
         holder.petItemView.text = current.name
         holder.petBreedView.text = current.breed
-//        holder.petItemView.text = current.gender
-//        holder.petItemView.text = current.weight.toString()
+//        holder.petGenderView.text = current.gender
+//        holder.petWeightView.text = current.weight
     }
 
     internal fun setPets(pets: List<Pet>) {
