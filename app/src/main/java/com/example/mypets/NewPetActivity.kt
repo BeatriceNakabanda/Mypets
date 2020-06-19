@@ -37,6 +37,8 @@ class NewPetActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_pet)
 
+        petViewModel = ViewModelProvider(this).get(PetViewModel::class.java)
+
         pet = intent?.extras?.get("pet") as Pet?
 
         editPetNameView = findViewById(R.id.edit_pet_name)
@@ -62,7 +64,6 @@ class NewPetActivity : AppCompatActivity() {
             pet?.gender?.let { mGenderSpinner.setSelection(it) }
             editPetWeightView.setText(pet?.weight.toString())
 
-
             editPet()
         }
 
@@ -71,19 +72,15 @@ class NewPetActivity : AppCompatActivity() {
         override fun afterTextChanged(editable: Editable?) {
             val invalidNameText =
                 findViewById<View>(R.id.invalid_pet_name) as TextView
-            if (editable != null && !editPetNameView.equals("")){
-                invalidNameText.visibility = View.GONE
-            }else{
-                invalidNameText.visibility = View.VISIBLE
+            editable != null && !editPetNameView.equals("")
+            invalidNameText.visibility = View.GONE
 
-            }
         }
 
         override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
         }
 
     }
@@ -167,32 +164,33 @@ class NewPetActivity : AppCompatActivity() {
             val petName = editPetNameView.getText().toString().trim()
             val petBreed = editPetBreedView.getText().toString().trim()
             val petWeightString = editPetWeightView.getText().toString()
+            val petWeight = Integer.parseInt(petWeightString)
 
-            val replyIntent = Intent()
+//            val replyIntent = Intent()
 
             when {
                 isEmpty() || isinvalidGender(mGender) -> {
-                    setResult(Activity.RESULT_CANCELED, replyIntent)
+//                    setResult(Activity.RESULT_CANCELED, replyIntent)
+                    Toast.makeText(
+                        applicationContext,
+                        R.string.empty_not_saved,
+                        Toast.LENGTH_LONG
+                    ).show()
 
                 }
                 else -> {
-                    replyIntent.putExtra(EXTRA_NAME, petName)
-                    replyIntent.putExtra(EXTRA_BREED, petBreed)
-                    replyIntent.putExtra(EXTRA_WEIGHT, petWeightString)
-                    replyIntent.putExtra(EXTRA_GENDER, mGender)
-                    replyIntent.putExtra(EXTRA_ID, petId)
 
-                    setResult(Activity.RESULT_OK, replyIntent)
+                    val updatedPet = Pet(
+                        name = petName,
+                        breed = petBreed,
+                        gender = mGender,
+                        weight = petWeight
+                    )
 
-                    Toast.makeText(
-                        this,"name: $petName breed: $petBreed gender: $mGender weight: $petWeightString",
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    val update = petViewModel.update(updatedPet)
+                    Unit
 
-//                    Toast.makeText(
-//                        this, getString(R.string.editor_update_pet_successful),
-//                        Toast.LENGTH_SHORT
-//                    ).show()
+
 
                 }
             }

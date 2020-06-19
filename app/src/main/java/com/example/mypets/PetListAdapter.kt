@@ -91,7 +91,9 @@ class PetListAdapter internal constructor( private val context: Context)
                         oldItemPosition: Int,
                         newItemPosition: Int
                     ): Boolean {
-                        return this@PetListAdapter.pets[oldItemPosition] == pets[newItemPosition]
+//                        return this@PetListAdapter.pets[oldItemPosition] == pets[newItemPosition]
+                        return this@PetListAdapter.pets.get(oldItemPosition)
+                            .equals(pets.get(newItemPosition))
                     }
 
                 } )

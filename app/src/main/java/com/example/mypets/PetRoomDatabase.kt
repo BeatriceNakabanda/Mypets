@@ -19,21 +19,14 @@ abstract class PetRoomDatabase : RoomDatabase() {
     private class PetDatabaseCallback(
         private val scope: CoroutineScope
     ) : RoomDatabase.Callback() {
-        /**
-         * Override the onOpen method to populate the database.
-         * For this sample, we clear the database every time it is created or opened.
-         */
-        override fun onOpen(db: SupportSQLiteDatabase) {
-            super.onOpen(db)
-            // If you want to keep the data through app restarts,
-            // comment out the following line.
+
+        //Called when database is created for the first time after tables have been created
+        override fun onCreate(db: SupportSQLiteDatabase) {
+            super.onCreate(db)
             INSTANCE?.let { database ->
                 scope.launch(Dispatchers.IO) {
                     //populateDatabase(database.petDao())
                     val petDao = database.petDao()
-
-                    // Delete all pets.
-                    petDao.deleteAll()
 
                     //Insert pet
                     val pet1 = Pet(name = "Berry", breed = "Chihuahua", weight = 25, gender = 1)
@@ -42,6 +35,19 @@ abstract class PetRoomDatabase : RoomDatabase() {
                     petDao.insert(pet2)
 
                 }
+            }
+        }
+
+        //Called when the database was open
+        override fun onOpen(db: SupportSQLiteDatabase) {
+            super.onOpen(db)
+            INSTANCE?.let { database ->
+                scope.launch(Dispatchers.IO) {
+                    val petDao = database.petDao()
+                    // Delete all pets.
+                    petDao.deleteAll()
+                }
+
             }
         }
     }

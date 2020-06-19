@@ -24,4 +24,27 @@ data class Pet(
     fun getId(): Any {
             return pid
     }
+
+    override fun equals(other: Any?): Boolean {
+        if (javaClass != other?.javaClass) {
+            return false
+        }
+        other as Pet
+        if (pid != other.pid) {
+            return false
+        }
+        if (name != other.name) {
+            return false
+        }
+        if (breed != other.breed) {
+            return false
+        }
+        if (gender != other.gender) {
+            return false
+        }
+        if (weight != other.weight) {
+            return false
+        }
+        return true
+    }
 }

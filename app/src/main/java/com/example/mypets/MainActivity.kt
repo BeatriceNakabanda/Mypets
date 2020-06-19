@@ -74,22 +74,6 @@ class MainActivity : AppCompatActivity()  {
                 )
                 petViewModel.insert(newPet)
                 Unit
-//
-//                val updatedPet = Pet(
-//                    name = petName,
-//                    breed = petBreed,
-//                    weight = petWeight,
-//                    gender = petGender
-//                )
-//                petViewModel.update(petId, updatedPet)
-                petViewModel.update(newPet)
-                Unit
-
-
-                Toast.makeText(
-                    applicationContext,
-                    "updated name ${newPet.name}",
-                    Toast.LENGTH_LONG).show()
 
             }
         }else {
@@ -100,10 +84,6 @@ class MainActivity : AppCompatActivity()  {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-//        recyclerView.adapter.notifyDataSetChanged()
-    }
 
 }
 
