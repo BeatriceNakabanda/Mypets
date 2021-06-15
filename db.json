@@ -22,48 +22,7 @@
       }
      ]
     },
-     {
-      "id": 2,
-      "bankName": "Equity Bank",
-      "accountTypes": [
-      {
-      "name": "Personal current account",
-      "code": 1
-      },
-      {
-        "name":"Save plus account",
-        "code": 2
-      },
-     ]
-    },
-    {
-      "id": 3,
-      "bankName": "Stanbic Bank",
-      "accountTypes": [
-      {
-      "name": "Everyday account",
-      "code": 1
-      },
-      {
-        "name":"Gold current account",
-        "code": 2
-      },
-     ]
-    },
-        {
-      "id": 3,
-      "bankName": "Standard Chartered Bank",
-      "accountTypes": [
-      {
-      "name": "Digital Life current account",
-      "code": 1
-      },
-      {
-        "name":"Safari savings account",
-        "code": 2
-      },
-     ]
-    },
+
   ],
   "profile": {
     "name": "typicode"
