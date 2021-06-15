@@ -1,8 +1,26 @@
 {
-  "posts": [
+  "banks": [
     {
       "id": 1,
-      "title": "hello"
+      "bankName": "DFCU Bank",
+      "accountTypes": [
+      {
+      "name": "Dembe account",
+      "code": 1
+      },
+      {
+        "name":"Salary account",
+        "code": 2
+      },
+      {
+        "name": "Pinnacle account",
+        "code": 3
+      },
+      {
+        "name": "Young Savings account",
+        "code": 4
+      }
+     ]
     }
   ],
   "profile": {
