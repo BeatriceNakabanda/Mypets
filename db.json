@@ -1,30 +1,764 @@
 {
+  "version": 1,
+  "versionMessage": "Added Districts and Banks",
+  "districts": [
+    {
+      "name": "ABIM",
+      "code": "ABIM"
+    },
+    {
+      "name": "ACCRA",
+      "code": "ACC"
+    },
+    {
+      "name": "ADJUMANI",
+      "code": "ADJU"
+    },
+    {
+      "name": "ADJUMANI",
+      "code": "ADJUM"
+    },
+    {
+      "name": "ADDIS ABABA",
+      "code": "ADS"
+    },
+    {
+      "name": "AGAGO DISTRICT",
+      "code": "AGA"
+    },
+    {
+      "name": "AGAGO",
+      "code": "AGAGO"
+    },
+    {
+      "name": "AGRA",
+      "code": "AGRA"
+    },
+    {
+      "name": "ALEBTONG",
+      "code": "ALEBT"
+    },
+    {
+      "name": "ALGIERS",
+      "code": "ALG"
+    },
+    {
+      "name": "AMMAN",
+      "code": "AMN"
+    },
+    {
+      "name": "AMOLATAR",
+      "code": "AMOLA"
+    },
+    {
+      "name": "AMUDAT",
+      "code": "AMUDA"
+    },
+    {
+      "name": "AMURIA",
+      "code": "AMURI"
+    },
+    {
+      "name": "AMURU",
+      "code": "AMURU"
+    },
+    {
+      "name": "APAC",
+      "code": "APAC"
+    },
+    {
+      "name": "ARUA",
+      "code": "ARUA"
+    },
+    {
+      "name": "ASMARA",
+      "code": "ASMA"
+    },
+    {
+      "name": "ATHENS",
+      "code": "ATH"
+    },
+    {
+      "name": "BAGHDAD",
+      "code": "BAG"
+    },
+    {
+      "name": "BALOCHISTAN",
+      "code": "BALOC"
+    },
+    {
+      "name": "BEIJING",
+      "code": "BEJ"
+    },
+    {
+      "name": "BELFAST",
+      "code": "BEL"
+    },
+    {
+      "name": "BERLIN",
+      "code": "BER"
+    },
+    {
+      "name": "BOGOTA",
+      "code": "BOG"
+    },
+    {
+      "name": "BOMBAY",
+      "code": "BOM"
+    },
+    {
+      "name": "BRISTOL",
+      "code": "BRIS"
+    },
+    {
+      "name": "BRUSSELS",
+      "code": "BRS"
+    },
+    {
+      "name": "BUDAKA",
+      "code": "BUDAK"
+    },
+    {
+      "name": "BUDUDA",
+      "code": "BUDUD"
+    },
+    {
+      "name": "BUGIRI",
+      "code": "BUGIR"
+    },
+    {
+      "name": "BUGWERI",
+      "code": "BUGWE"
+    },
+    {
+      "name": "BUHWEJU",
+      "code": "BUHWE"
+    },
+    {
+      "name": "BUIKWE",
+      "code": "BUIKW"
+    },
+    {
+      "name": "BUJUMBURA",
+      "code": "BUJ"
+    },
+    {
+      "name": "BUKEDEA",
+      "code": "BUKED"
+    },
+    {
+      "name": "BUKOMANSIMBI",
+      "code": "BUKOM"
+    },
+    {
+      "name": "BUKWA",
+      "code": "BUKWA"
+    },
+    {
+      "name": "BUKWO",
+      "code": "BUKWO"
+    },
+    {
+      "name": "BULIISA",
+      "code": "BULII"
+    },
+    {
+      "name": "BULIISA",
+      "code": "BULSA"
+    },
+    {
+      "name": "BUNDIBUGYO",
+      "code": "BUNDI"
+    },
+    {
+      "name": "BUNYANGABU",
+      "code": "BUNYA"
+    },
+    {
+      "name": "BUSHENYI",
+      "code": "BUSHE"
+    },
+    {
+      "name": "BUSIA",
+      "code": "BUSIA"
+    },
+    {
+      "name": "BUTALEJA",
+      "code": "BUTAL"
+    },
+    {
+      "name": "BUTAMBALA",
+      "code": "BUTAM"
+    },
+    {
+      "name": "BUTEBO",
+      "code": "BUTEB"
+    },
+    {
+      "name": "BUVUMA",
+      "code": "BUVUM"
+    },
+    {
+      "name": "BUYENDE",
+      "code": "BUYEN"
+    },
+    {
+      "name": "HOIMA MUNICIPALITY",
+      "code": "HOIMA"
+    },
+    {
+      "name": "IBANDA",
+      "code": "IBAND"
+    },
+    {
+      "name": "IGANGA",
+      "code": "IGANG"
+    },
+    {
+      "name": "ISINGIRO",
+      "code": "ISING"
+    },
+    {
+      "name": "ISLAMABAD",
+      "code": "ISLAM"
+    },
+    {
+      "name": "JERUSALAM",
+      "code": "JER"
+    },
+    {
+      "name": "JINJA",
+      "code": "JINJA"
+    },
+    {
+      "name": "KAABONG",
+      "code": "KAABO"
+    },
+    {
+      "name": "KABUL",
+      "code": "KAB"
+    },
+    {
+      "name": "KABALE",
+      "code": "KABAL"
+    },
+    {
+      "name": "KABAROLE",
+      "code": "KABAR"
+    },
+    {
+      "name": "KABERAMAIDO",
+      "code": "KABER"
+    },
+    {
+      "name": "KAGADI",
+      "code": "KAGAD"
+    },
+    {
+      "name": "KAKUMIRO",
+      "code": "KAKUM"
+    },
+    {
+      "name": "KALANGALA",
+      "code": "KALAN"
+    },
+    {
+      "name": "KALIRO",
+      "code": "KALIR"
+    },
+    {
+      "name": "KALUNGU",
+      "code": "KALUN"
+    },
+    {
+      "name": "KAMULI",
+      "code": "KAMLI"
+    },
+    {
+      "name": "KAMPALA",
+      "code": "KAMPA"
+    },
+    {
+      "name": "KAMULI",
+      "code": "KAMUL"
+    },
+    {
+      "name": "KAMWENGE",
+      "code": "KAMWE"
+    },
+    {
+      "name": "KANUNGU",
+      "code": "KANUN"
+    },
+    {
+      "name": "KAPCHORWA",
+      "code": "KAPCH"
+    },
+    {
+      "name": "KAPELEBYONG",
+      "code": "KAPEL"
+    },
+    {
+      "name": "KARENGA",
+      "code": "KAREN"
+    },
+    {
+      "name": "KASANDA",
+      "code": "KASAN"
+    },
+    {
+      "name": "KASESE",
+      "code": "KASES"
+    },
+    {
+      "name": "KATAKWI",
+      "code": "KATAK"
+    },
+    {
+      "name": "KAYUNGA",
+      "code": "KAYUN"
+    },
+    {
+      "name": "KAZO",
+      "code": "KAZO"
+    },
+    {
+      "name": "KIBAALE",
+      "code": "KIBAA"
+    },
+    {
+      "name": "KIBOGA",
+      "code": "KIBOG"
+    },
+    {
+      "name": "KIBUKU",
+      "code": "KIBUK"
+    },
+    {
+      "name": "KIBUUBE",
+      "code": "KIBUU"
+    },
+    {
+      "name": "KIGALI",
+      "code": "KIG"
+    },
+    {
+      "name": "KINGSTOW",
+      "code": "KIN"
+    },
+    {
+      "name": "KIRUHURA",
+      "code": "KIRUH"
+    },
+    {
+      "name": "KIRYANDONGO",
+      "code": "KIRYA"
+    },
+    {
+      "name": "KISORO",
+      "code": "KISO"
+    },
+    {
+      "name": "KISORO",
+      "code": "KISOR"
+    },
+    {
+      "name": "KITAGWENDA",
+      "code": "KITAG"
+    },
+    {
+      "name": "KITGUM",
+      "code": "KITGM"
+    },
+    {
+      "name": "KITGUM",
+      "code": "KITGU"
+    },
+    {
+      "name": "KINSHASHA",
+      "code": "KNS"
+    },
+    {
+      "name": "KOBOKO",
+      "code": "KOBOK"
+    },
+    {
+      "name": "KOLE",
+      "code": "KOLE"
+    },
+    {
+      "name": "KOTIDO",
+      "code": "KOTID"
+    },
+    {
+      "name": "KHARTOUM",
+      "code": "KTM"
+    },
+    {
+      "name": "KUALA LUMPUR",
+      "code": "KUA"
+    },
+    {
+      "name": "KUMI",
+      "code": "KUMI"
+    },
+    {
+      "name": "KUWAIT CITY",
+      "code": "KUW"
+    },
+    {
+      "name": "KWANIA",
+      "code": "KWANI"
+    },
+    {
+      "name": "KWEEN",
+      "code": "KWEEN"
+    },
+    {
+      "name": "KYANKWANZI",
+      "code": "KYANK"
+    },
+    {
+      "name": "KYEGEGWA",
+      "code": "KYEGE"
+    },
+    {
+      "name": "KYENJOJO",
+      "code": "KYENJ"
+    },
+    {
+      "name": "KYOTERA",
+      "code": "KYOTE"
+    },
+    {
+      "name": "LAMWO",
+      "code": "LAMWO"
+    },
+    {
+      "name": "LILONGWE",
+      "code": "LIL"
+    },
+    {
+      "name": "LIRA",
+      "code": "LIRA"
+    },
+    {
+      "name": "LOME",
+      "code": "LOM"
+    },
+    {
+      "name": "LONDON",
+      "code": "LON"
+    },
+    {
+      "name": "LOS ANGELES",
+      "code": "LOS"
+    },
+    {
+      "name": "LUANDA",
+      "code": "LUA"
+    },
+    {
+      "name": "LUSAKA",
+      "code": "LUS"
+    },
+    {
+      "name": "LUSOT",
+      "code": "LUSOT"
+    },
+    {
+      "name": "LUUKA",
+      "code": "LUUKA"
+    },
+    {
+      "name": "LUWEERO",
+      "code": "LUWEE"
+    },
+    {
+      "name": "LWENGO",
+      "code": "LWENG"
+    },
+    {
+      "name": "LYANTONDE",
+      "code": "LYANT"
+    },
+    {
+      "name": "MADI-OKOLLO",
+      "code": "MADI"
+    },
+    {
+      "name": "MANAFWA",
+      "code": "MANAF"
+    },
+    {
+      "name": "MARACHA",
+      "code": "MARAC"
+    },
+    {
+      "name": "MASAKA",
+      "code": "MASAK"
+    },
+    {
+      "name": "MASINDI",
+      "code": "MASIN"
+    },
+    {
+      "name": "MAYUGE",
+      "code": "MAYUG"
+    },
+    {
+      "name": "MBALE",
+      "code": "MBALE"
+    },
+    {
+      "name": "MBARARA",
+      "code": "MBARA"
+    },
+    {
+      "name": "MBARARA",
+      "code": "MBR"
+    },
+    {
+      "name": "MITOOMA",
+      "code": "MITO"
+    },
+    {
+      "name": "MITOOMA",
+      "code": "MITOO"
+    },
+    {
+      "name": "MITYANA",
+      "code": "MITY"
+    },
+    {
+      "name": "MOMBASA",
+      "code": "MOM"
+    },
+    {
+      "name": "MOROTO",
+      "code": "MOROT"
+    },
+    {
+      "name": "MOSCOW",
+      "code": "MOS"
+    },
+    {
+      "name": "MOYO",
+      "code": "MOYO"
+    },
+    {
+      "name": "MPIGI",
+      "code": "MPIGI"
+    },
+    {
+      "name": "MUBENDE",
+      "code": "MUBEN"
+    },
+    {
+      "name": "MUKONO",
+      "code": "MUKON"
+    },
+    {
+      "name": "NAKAPIRIPIRIT",
+      "code": "NAKAP"
+    },
+    {
+      "name": "NAKASEKE",
+      "code": "NAKAS"
+    },
+    {
+      "name": "NAKASONGOLA",
+      "code": "NAKSO"
+    },
+    {
+      "name": "NAMAYINGO",
+      "code": "NAMAY"
+    },
+    {
+      "name": "NAMISINDWA",
+      "code": "NAMIS"
+    },
+    {
+      "name": "NAMUTUMBA",
+      "code": "NAMUT"
+    },
+    {
+      "name": "NAPAK",
+      "code": "NAPAK"
+    },
+    {
+      "name": "NAKASEKE",
+      "code": "NASEK"
+    },
+    {
+      "name": "NEBBI",
+      "code": "NEBBI"
+    },
+    {
+      "name": "NGORA",
+      "code": "NGORA"
+    },
+    {
+      "name": "NTOROKO",
+      "code": "NTORO"
+    },
+    {
+      "name": "NTUNGAMO",
+      "code": "NTUNG"
+    },
+    {
+      "name": "NWOYA",
+      "code": "NWOYA"
+    },
+    {
+      "name": "OBONGI",
+      "code": "OBONG"
+    },
+    {
+      "name": "OMORO",
+      "code": "OMORO"
+    },
+    {
+      "name": "OTUKE",
+      "code": "OTUKE"
+    },
+    {
+      "name": "OYAM",
+      "code": "OYAM"
+    },
+    {
+      "name": "PADER",
+      "code": "PADER"
+    },
+    {
+      "name": "PAKWACH",
+      "code": "PAKWA"
+    },
+    {
+      "name": "PALIISA",
+      "code": "PALIS"
+    },
+    {
+      "name": "PALLISA",
+      "code": "PALLI"
+    },
+    {
+      "name": "RAKAI",
+      "code": "RAKAI"
+    },
+    {
+      "name": "RUBIRIZI",
+      "code": "RUBIR"
+    },
+    {
+      "name": "RUKIGA",
+      "code": "RUKIG"
+    },
+    {
+      "name": "RUKUNGIRI",
+      "code": "RUKUN"
+    },
+    {
+      "name": "RWAMPARA",
+      "code": "RWAMP"
+    },
+    {
+      "name": "SEMBABULE",
+      "code": "SEMBA"
+    },
+    {
+      "name": "SERERE",
+      "code": "SERER"
+    },
+    {
+      "name": "SHEEMA",
+      "code": "SHEEM"
+    },
+    {
+      "name": "SIRONKO",
+      "code": "SIRON"
+    },
+    {
+      "name": "SOROTI",
+      "code": "SOROT"
+    },
+    {
+      "name": "SSEMBABULE",
+      "code": "SSEMB"
+    },
+    {
+      "name": "TOKYO",
+      "code": "TKY"
+    },
+    {
+      "name": "TORORO",
+      "code": "TOROR"
+    },
+    {
+      "name": "TORONTO",
+      "code": "TRT"
+    },
+    {
+      "name": "WAKISO",
+      "code": "WAKIS"
+    },
+    {
+      "name": "YUMBE",
+      "code": "YUMBE"
+    },
+    {
+      "name": "ZOMBO",
+      "code": "ZOMBO"
+    }
+  ],
   "banks": [
     {
-      "id": 1,
-      "bankName": "DFCU Bank",
+      "name": "DFCU",
+      "code": "001",
       "accountTypes": [
-      {
-      "name": "Dembe account",
-      "code": 1
-      },
-      {
-        "name":"Salary account",
-        "code": 2
-      },
-      {
-        "name": "Pinnacle account",
-        "code": 3
-      },
-      {
-        "name": "Young Savings account",
-        "code": 4
-      }
-     ]
+        {
+          "name": "Dembe",
+          "code": "DEMB",
+          "category": "Savings"
+        },
+        {
+          "name": "Saving Plus",
+          "code": "SAVP",
+          "category": "Savings"
+        },
+        {
+          "name": "Young Savers",
+          "code": "YOUS",
+          "category": "Savings"
+        },
+        {
+          "name": "Salary",
+          "code": "SAL",
+          "category": "Current"
+        }
+      ]
     },
-
+    {
+      "name": "CENTENARY",
+      "code": "002",
+      "accountTypes": [
+        {
+          "name": "Cente Ordinary",
+          "code": "CENTO",
+          "category": "Savings"
+        },
+        {
+          "name": "Cente Plus",
+          "code": "CENTP",
+          "category": "Savings"
+        },
+        {
+          "name": "Cente Current",
+          "code": "CENTC",
+          "category": "Current"
+        }
+      ]
+    }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "occupations": null
 }
