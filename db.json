@@ -2,65 +2,7 @@
   "version": 1,
   "versionMessage": "Added Districts and Banks",
   "districts": [
-  
-    {
-      "name": "AGAGO DISTRICT",
-      "code": "AGA"
-    },
-    {
-      "name": "AGAGO",
-      "code": "AGAGO"
-    },
-    {
-      "name": "AGRA",
-      "code": "AGRA"
-    },
-    {
-      "name": "ALEBTONG",
-      "code": "ALEBT"
-    },
-    {
-      "name": "ALGIERS",
-      "code": "ALG"
-    },
-    {
-      "name": "BUJUMBURA",
-      "code": "BUJ"
-    },
-    {
-      "name": "BUKEDEA",
-      "code": "BUKED"
-    },
-    {
-      "name": "BUKOMANSIMBI",
-      "code": "BUKOM"
-    },
-
-    {
-      "name": "BUTEBO",
-      "code": "BUTEB"
-    },
-    {
-      "name": "BUVUMA",
-      "code": "BUVUM"
-    },
-    {
-      "name": "BUYENDE",
-      "code": "BUYEN"
-    },
-    {
-      "name": "HOIMA MUNICIPALITY",
-      "code": "HOIMA"
-    },
-
-    {
-      "name": "KAPELEBYONG",
-      "code": "KAPEL"
-    },
-    {
-      "name": "KARENGA",
-      "code": "KAREN"
-    },
+ 
     {
       "name": "KASANDA",
       "code": "KASAN"
@@ -69,53 +11,7 @@
       "name": "KITGUM",
       "code": "KITGM"
     },
-    {
-      "name": "KOBOKO",
-      "code": "KOBOK"
-    },
-    {
-      "name": "KOLE",
-      "code": "KOLE"
-    },
-    {
-      "name": "KOTIDO",
-      "code": "KOTID"
-    },
-    {
-      "name": "KHARTOUM",
-      "code": "KTM"
-    },
-    {
-      "name": "KUALA LUMPUR",
-
-    {
-      "name": "NTOROKO",
-      "code": "NTORO"
-    },
-    {
-      "name": "NTUNGAMO",
-      "code": "NTUNG"
-    },
-    {
-      "name": "NWOYA",
-      "code": "NWOYA"
-    },
-    {
-      "name": "OBONGI",
-      "code": "OBONG"
-    },
-    {
-      "name": "OMORO",
-      "code": "OMORO"
-    },
-    {
-      "name": "OTUKE",
-      "code": "OTUKE"
-    },
-    {
-      "name": "OYAM",
-      "code": "OYAM"
-    },
+ 
   ],
   "banks": [
     {
